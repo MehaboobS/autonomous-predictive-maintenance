@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
 import { useSelector } from "react-redux";
 import Loader from "../components/Loader";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const ServiceDashboard = () => {
 
@@ -18,7 +19,7 @@ const ServiceDashboard = () => {
       setLoading(true);
 
       const res = await fetch(
-        `http://localhost:5000/api/services/requests/${user.email}`
+        `${BASE_URL}/api/services/requests/${user.email}`
       );
 
       const data = await res.json();
@@ -56,7 +57,7 @@ const ServiceDashboard = () => {
       setLoading(true);
 
       await fetch(
-        "http://localhost:5000/api/services/accept-request",
+        `${BASE_URL}/api/services/accept-request`,
         {
           method:"PATCH",
           headers:{
@@ -93,7 +94,7 @@ const ServiceDashboard = () => {
       setLoading(true);
 
       await fetch(
-        "http://localhost:5000/api/services/reject-request",
+        `${BASE_URL}/api/services/reject-request`,
         {
           method:"PATCH",
           headers:{

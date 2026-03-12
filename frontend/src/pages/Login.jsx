@@ -7,6 +7,7 @@ import CustomAlert from "../components/CustomAlert";
 import useAlert from "../hooks/useAlert";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Login() {
 
@@ -40,7 +41,7 @@ export default function Login() {
       console.log("Logging in with:", formData);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        `${BASE_URL}/api/auth/login`,
         {
           method: "POST",
           headers: {

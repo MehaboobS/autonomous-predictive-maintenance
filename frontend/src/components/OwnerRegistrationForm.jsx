@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import CustomAlert from "../components/CustomAlert";
 import useAlert from "../hooks/useAlert";
 import Loader from "../components/Loader";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function OwnerRegistrationForm() {
 
@@ -34,7 +35,7 @@ export default function OwnerRegistrationForm() {
       console.log("Registering with:", formData);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${BASE_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {

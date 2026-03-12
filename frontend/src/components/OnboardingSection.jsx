@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const OnboardingSection = () => {
 

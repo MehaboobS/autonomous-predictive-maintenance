@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { loginSuccess } from "../store/authSlice";
 import CustomAlert from "../components/CustomAlert";
 import useAlert from "../hooks/useAlert";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function RegisterService() {
 
@@ -46,7 +47,7 @@ export default function RegisterService() {
       console.log("Registering with:", formData);
 
       const response = await fetch(
-        "http://localhost:5000/api/services/register-service",
+        `${BASE_URL}/api/services/register-service`,
         {
           method: "POST",
           headers: {

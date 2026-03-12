@@ -3,6 +3,8 @@ import HeroSection from "./HeroSection";
 import dataFile from "../data/data.json";
 import { useSelector } from "react-redux";
 import { Link } from "react-router";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const Dashboard = () => {
 
@@ -12,7 +14,7 @@ const Dashboard = () => {
   console.log("Logged in user:", user.id);
   useEffect(() => {
     setData(dataFile);
-    fetch(`http://localhost:5000/api/vehicles/${user.id}`, {
+    fetch(`${BASE_URL}/api/vehicles/${user.id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

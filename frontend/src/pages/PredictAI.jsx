@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import CustomAlert from "../components/CustomAlert";
 import useAlert from "../hooks/useAlert";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const PredictAI = () => {
 
@@ -42,7 +43,7 @@ const PredictAI = () => {
       try{
 
         const res = await fetch(
-          `http://localhost:5000/api/vehicles/${user.id}`
+          `${BASE_URL}/api/vehicles/${user.id}`
         );
 
         const data = await res.json();
@@ -75,7 +76,7 @@ const PredictAI = () => {
       try{
 
         const res = await fetch(
-          `http://localhost:5000/api/telemetry/latest/${vehicleNumber}`
+          `${BASE_URL}/api/telemetry/latest/${vehicleNumber}`
         );
 
         const data = await res.json();
