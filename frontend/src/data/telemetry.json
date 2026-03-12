@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "10:00",
+    "engineTemp": 80,
+    "processTemp": 65,
+    "rpm": 1200,
+    "torque": 40,
+    "toolWear": 10,
+    "failure": 0
+  },
+  {
+    "timestamp": "10:02",
+    "engineTemp": 82,
+    "processTemp": 67,
+    "rpm": 1250,
+    "torque": 42,
+    "toolWear": 12,
+    "failure": 0
+  },
+  {
+    "timestamp": "10:04",
+    "engineTemp": 86,
+    "processTemp": 70,
+    "rpm": 1350,
+    "torque": 45,
+    "toolWear": 15,
+    "failure": 1
+  },
+  {
+    "timestamp": "10:06",
+    "engineTemp": 90,
+    "processTemp": 72,
+    "rpm": 1400,
+    "torque": 48,
+    "toolWear": 18,
+    "failure": 1
+  }
+]

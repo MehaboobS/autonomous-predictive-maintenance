@@ -1,0 +1,40 @@
+@import "tailwindcss";
+body {
+  cursor: none;
+}
+.input{
+  width:100%;
+  padding:12px;
+  background:#111;
+  border:1px solid #333;
+  border-radius:8px;
+  color:white;
+}
+.input-style {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-style:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease;
+}

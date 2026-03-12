@@ -1,0 +1,39 @@
+{
+  "vehicle": {
+    "vehicleNumber": "KA03MB101",
+    "manufacturer": "Hyundai",
+    "model": "i20",
+    "year": 2021,
+    "mileage": 54345,
+    "healthScore": 87,
+    "riskLevel": "Low",
+    "nextServiceDays": 14
+  },
+
+  "telemetry": {
+    "engineTemp": 82,
+    "batteryHealth": 91,
+    "oilLevel": 75,
+    "rpm": 1150
+  },
+
+  "prediction": {
+    "issue": "Cooling System Anomaly",
+    "failureProbability": 82,
+    "recommendedAction": "Schedule service within 48 hours"
+  },
+
+  "serviceCenters": [
+    {
+      "name": "Whitefield Auto Care",
+      "city": "Bangalore",
+      "distance": "4.2 km",
+      "availableSlots": ["10:30 AM", "12:00 PM", "3:00 PM"]
+    }
+  ],
+
+  "healthTrend": {
+    "months": ["Nov", "Dec", "Jan", "Feb", "Mar"],
+    "values": [60, 65, 68, 70, 72]
+  }
+}

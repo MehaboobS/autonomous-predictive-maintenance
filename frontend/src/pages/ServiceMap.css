@@ -1,0 +1,65 @@
+/* Map container should allow absolute positioning */
+#map {
+  position: relative;
+}
+
+
+/* Fixed popup container inside the map */
+
+.mapboxgl-popup {
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  max-width: 260px;
+  z-index: 5;
+}
+
+
+/* Remove Mapbox default popup styles */
+
+.mapboxgl-popup-content {
+  background: transparent;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
+
+/* Custom popup card */
+
+.popup-box {
+  text-align: center;
+  background: #111;
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  min-width: 200px;
+  border: 1px solid #333;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+
+/* Button */
+
+.popup-btn {
+  background: #facc15;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.popup-btn:hover {
+  background: #eab308;
+  transform: scale(1.05);
+}
