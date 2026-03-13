@@ -116,41 +116,41 @@ const OnboardingSection = () => {
           bg-black/90 backdrop-blur-md text-white
           flex flex-col items-center space-y-6 py-6 z-10"
         >
-          <Link to={user && user.role === "admin" ? "/admin-dashboard" : "/predictive-ai"} className="hover:text-yellow-400" onClick={() => setOpen(false)}>
+          {/* <Link to={user && user.role === "admin" ? "/admin-dashboard" : "/predictive-ai"} className="hover:text-yellow-400" onClick={() => setOpen(false)}>
 Admin Dashboard
-</Link>
+</Link> */}
 
-          <Link
+          {/* <Link
             to="/dashboard"
             className="hover:text-yellow-400"
             onClick={() => setOpen(false)}
           >
             Dashboard
-          </Link>
+          </Link> */}
 
           <Link
             to="/predictive-ai"
             className="hover:text-yellow-400"
             onClick={() => setOpen(false)}
           >
-            Predictive AI
+            Dashboard
           </Link>
 
-          <Link
+          {/* <Link
             to="/service-scheduling"
             className="hover:text-yellow-400"
             onClick={() => setOpen(false)}
           >
             Service Scheduling
-          </Link>
+          </Link> */}
 
-          <Link
+          {/* <Link
             to="/manufacturing-insights"
             className="hover:text-yellow-400"
             onClick={() => setOpen(false)}
           >
             Manufacturing Insights
-          </Link>
+          </Link> */}
 
           {user ? (
 
