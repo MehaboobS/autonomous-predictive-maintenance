@@ -16,15 +16,22 @@ async function predictFailure(data, vehicleType = "L") {
   };
 
   const response = await fetch(
-  `${process.env.ML_API_URL}/predict`,
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(payload)
+    `${process.env.ML_API_URL}/predict`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    }
+  );
+
+  // 🔴 Handle errors
+  if (!response.ok) {
+    const text = await response.text();
+    console.error("ML API error:", text);
+    throw new Error("ML API request failed");
   }
-);
 
   const result = await response.json();
 
