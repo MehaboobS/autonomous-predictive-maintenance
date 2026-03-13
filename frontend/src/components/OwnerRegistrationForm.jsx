@@ -11,7 +11,7 @@ export default function OwnerRegistrationForm() {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-  console.log("BASE_q]URL:", BASE_URL);
+  console.log("BASE_URL:", BASE_URL);
   const { alert, showAlert, closeAlert } = useAlert();
 
   const handleChange = (e) => {
@@ -33,7 +33,7 @@ export default function OwnerRegistrationForm() {
       setLoading(true);
 
       console.log("Registering with:", formData);
-
+      console.log("Sending request to:", `${BASE_URL}/api/auth/register`);
       const response = await fetch(
         `${BASE_URL}/api/auth/register`,
         {
