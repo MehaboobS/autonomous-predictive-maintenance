@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
 import Loader from "../components/Loader";
+import { Link } from "react-router";
 
 const AdminDashboard = () => {
 
@@ -45,7 +46,12 @@ const AdminDashboard = () => {
     <HeroSection>
 
       <div className="px-4 md:px-10 py-8 text-white space-y-10">
-
+      <Link
+    to="/"
+    className="text-yellow-400 text-xl hover:scale-110 transition"
+  >
+    DriveIQ
+  </Link>
         <h1 className="text-3xl font-bold">
           Admin Dashboard
         </h1>
