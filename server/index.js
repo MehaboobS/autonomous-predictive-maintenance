@@ -19,13 +19,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://autonomous-predictive-maintenance-git-main-mehaboobs-projects.vercel.app/", // your React frontend
-    credentials: true
-  })
-);
-app.use(
-  cors({
-    origin: true,   // reflect request origin
+    origin: true,
     credentials: true
   })
 );
