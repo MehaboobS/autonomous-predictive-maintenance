@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection";
 import { useSelector } from "react-redux";
 import Loader from "../components/Loader";
+import { Link } from "react-router-dom";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const ServiceDashboard = () => {
 
@@ -130,7 +132,12 @@ const ServiceDashboard = () => {
     {loading && <Loader />}
 
     <div className="px-4 sm:px-6 md:px-10 py-6 text-white space-y-8">
-
+      <Link
+    to="/"
+    className="text-yellow-400 text-xl hover:scale-110 transition"
+  >
+    DriveIQ
+  </Link>
       {/* HEADER */}
 
       <h1 className="text-2xl sm:text-3xl font-bold">
