@@ -16,15 +16,15 @@ async function predictFailure(data, vehicleType = "L") {
   };
 
   const response = await fetch(
-    "http://localhost:8000/predict",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    }
-  );
+  `${process.env.ML_API_URL}/predict`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  }
+);
 
   const result = await response.json();
 
