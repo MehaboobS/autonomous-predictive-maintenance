@@ -6,7 +6,7 @@ const passport = require("passport");
 const cors = require("cors");
 
 const connectDB = require("./config/db");
-
+const port = process.env.PORT || 5000;
 const authRoutes = require("./routes/authRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
 const vehicleRoutes = require("./routes/vehicleRoutes");
@@ -20,6 +20,12 @@ connectDB();
 app.use(
   cors({
     origin: "http://localhost:5173", // your React frontend
+    credentials: true
+  })
+);
+app.use(
+  cors({
+    origin: true,   // reflect request origin
     credentials: true
   })
 );
@@ -44,6 +50,6 @@ app.use("/api/vehicles", vehicleRoutes);
 app.use("/api/telemetry", telemetryRoutes);
 app.use("/api/admin", adminRoutes);
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
